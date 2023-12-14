@@ -27,7 +27,7 @@ form .search {
 form button,
 form input {
   padding: 0.5;
-  font-size: 2rem;
+  font-size: 2.2rem;
   border: none;
   background-color: #fff;
   outline: none;
@@ -69,6 +69,7 @@ select {
   padding: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 .select:hover:after {
   background-color: #fff;
@@ -80,7 +81,7 @@ select {
   justify-content: center;
 }
 .todo-list {
-  min-height: 30%;
+  min-width: 25%;
   list-style: none;
 }
 .todo {
@@ -91,6 +92,8 @@ select {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 25rem;
+  transition: 0.5s all ease;
 }
 .todo li {
   width: 100%;
@@ -109,8 +112,9 @@ select {
   background-color: #0b8793;
 }
 .fa-check-circle,
-.fa-minıs-circle {
+.fa-minus-circle {
   font-size: 1rem;
+  pointer-events: none;
 }
 
 /* Alert Css */
@@ -134,4 +138,14 @@ select {
 }
 .alert-success {
   background-color: #5ebe92;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(360deg);
+  opacity: 0;
+}
+
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
 }
